@@ -7,7 +7,7 @@ metadata:
     type: local
     author: qing.na
 spec:
-  storageClassName: nfs
+  storageClassName: nfs-client
   capacity:
     storage: 40Gi
   accessModes:
