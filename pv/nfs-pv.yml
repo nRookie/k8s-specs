@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: jenkins
+  namespace: jenkins
+  labels:
+    type: local
+    author: qing.na
+spec:
+  storageClassName: nfs
+  capacity:
+    storage: 40Gi
+  accessModes:
+    - ReadWriteMany
+  volumeMode: Filesystem
+  mountOptions:
+    - hard
+    - nfsvers=4.1
+ # persistentVolumeReclaimPolicy: Retain
+  nfs:
+    path: /data/
+    server: 172.16.0.51
+    readOnly: false

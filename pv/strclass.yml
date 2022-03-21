@@ -1,0 +1,10 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: nfs
+  namespace: jenkins
+provisioner: nfs-subdir-external-provisioner
+parameters:
+  server: 172.16.0.51
+  path: /data
+  readOnly: "false"
