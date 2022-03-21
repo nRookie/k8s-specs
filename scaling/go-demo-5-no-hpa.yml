@@ -117,16 +117,10 @@ spec:
           requests:
             memory: "50Mi"
             cpu: 0.1
-  volumeClaimTemplates:
-  - metadata:
-      name: mongo-data
-    spec:
-      accessModes:
-      - ReadWriteOnce
-      resources:
-        requests:
-          storage: 2Gi
-
+      volumes:
+        - name: mongo-data
+          persistentVolumeClaim:
+            claimName: mongo-data
 ---
 
 apiVersion: v1
