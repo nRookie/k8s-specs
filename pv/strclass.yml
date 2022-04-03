@@ -5,6 +5,6 @@ metadata:
   namespace: jenkins
 provisioner: nfs-subdir-external-provisioner
 parameters:
-  server: 172.16.0.51
+  server: 172.16.0.15
   path: /data
   readOnly: "false"

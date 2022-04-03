@@ -19,5 +19,5 @@ spec:
  # persistentVolumeReclaimPolicy: Retain
   nfs:
     path: /data/
-    server: 172.16.0.51
+    server: 172.16.0.15
     readOnly: false
